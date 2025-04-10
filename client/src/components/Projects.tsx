@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-// Define project type
 interface Project {
   id: number;
   title: string;
@@ -13,78 +12,75 @@ interface Project {
 }
 
 const Projects = () => {
-  // Project data
+  const [filter, setFilter] = useState('all');
+  
   const projects: Project[] = [
     {
       id: 1,
       title: "E-Commerce Platform",
-      description: "A full-featured online store with product management, cart functionality, and payment processing.",
-      image: "project1.svg",
+      description: "A full-featured e-commerce platform with product management, shopping cart, user authentication, and payment processing.",
+      image: "https://via.placeholder.com/500x300/1f2937/4f46e5?text=E-Commerce+Platform",
       category: ["web", "fullstack"],
-      tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+      tags: ["React", "Node.js", "MongoDB", "Express", "Redux"],
       demo: "#",
       code: "#"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A mobile application for managing tasks, projects, and team collaboration with real-time updates.",
-      image: "project2.svg",
-      category: ["mobile", "frontend"],
-      tags: ["Flutter", "Firebase", "Dart", "Material Design"],
+      title: "Fitness Tracking App",
+      description: "A mobile application for tracking workouts, progress, and nutrition with personalized recommendations.",
+      image: "https://via.placeholder.com/500x300/1f2937/4f46e5?text=Fitness+Tracking+App",
+      category: ["mobile"],
+      tags: ["React Native", "Firebase", "Redux", "Node.js"],
       demo: "#",
       code: "#"
     },
     {
       id: 3,
-      title: "Social Media Dashboard",
-      description: "An analytics dashboard for tracking social media performance across multiple platforms.",
-      image: "project3.svg",
+      title: "Task Management Dashboard",
+      description: "A dashboard for managing tasks, projects, and team collaboration with real-time updates.",
+      image: "https://via.placeholder.com/500x300/1f2937/4f46e5?text=Task+Management",
       category: ["web", "frontend"],
-      tags: ["React", "D3.js", "Tailwind CSS", "Chart.js"],
+      tags: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
       demo: "#",
       code: "#"
     },
     {
       id: 4,
-      title: "Real-Time Chat Application",
-      description: "A real-time messaging platform with private chats, group conversations, and media sharing.",
-      image: "project4.svg",
+      title: "Social Networking Platform",
+      description: "A social media platform with features like user profiles, posts, comments, likes, and real-time chat.",
+      image: "https://via.placeholder.com/500x300/1f2937/4f46e5?text=Social+Network",
       category: ["web", "fullstack"],
-      tags: ["Next.js", "Socket.io", "PostgreSQL", "TypeScript"],
+      tags: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
       demo: "#",
       code: "#"
     },
     {
       id: 5,
-      title: "Fitness Tracking App",
-      description: "A cross-platform mobile app for tracking workouts, setting goals, and monitoring health metrics.",
-      image: "project5.svg",
-      category: ["mobile", "fullstack"],
-      tags: ["React Native", "Node.js", "Express", "MongoDB"],
+      title: "Weather Forecast App",
+      description: "A weather forecast application with location-based forecasts, hourly and weekly predictions, and weather alerts.",
+      image: "https://via.placeholder.com/500x300/1f2937/4f46e5?text=Weather+App",
+      category: ["mobile", "frontend"],
+      tags: ["React Native", "OpenWeatherAPI", "Redux", "Google Maps API"],
       demo: "#",
       code: "#"
     },
     {
       id: 6,
-      title: "Weather Forecast App",
-      description: "A weather application providing real-time forecasts, historical data, and location-based services.",
-      image: "project6.svg",
-      category: ["web", "frontend"],
-      tags: ["React", "OpenWeather API", "Leaflet Maps", "Redux"],
+      title: "Real Estate Listing Platform",
+      description: "A platform for listing and searching real estate properties with maps, filters, and contact forms.",
+      image: "https://via.placeholder.com/500x300/1f2937/4f46e5?text=Real+Estate+Platform",
+      category: ["web", "fullstack"],
+      tags: ["Angular", "Node.js", "PostgreSQL", "Google Maps API"],
       demo: "#",
       code: "#"
     }
   ];
-
-  // Filter state
-  const [activeFilter, setActiveFilter] = useState('all');
-
-  // Filter the projects based on the active filter
-  const filteredProjects = activeFilter === 'all' 
+  
+  const filteredProjects = filter === 'all' 
     ? projects 
-    : projects.filter(project => project.category.includes(activeFilter));
-
+    : projects.filter(project => project.category.includes(filter));
+  
   return (
     <section className="projects section" id="projects">
       <div className="container">
@@ -92,90 +88,51 @@ const Projects = () => {
           <h2 className="section__title">My <span>Projects</span></h2>
           <div className="section__subtitle-line"></div>
           <p className="section__description">
-            Here are some of my recent projects showcasing my skills and experience in web and mobile development.
+            Here are some of the projects I've worked on. Each project represents a unique challenge and solution.
           </p>
         </div>
         
         <div className="projects__filters" data-aos="fade-up">
-          <button 
-            className={`projects__filter ${activeFilter === 'all' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('all')}
+          <span 
+            className={`projects__item ${filter === 'all' ? 'active' : ''}`} 
+            onClick={() => setFilter('all')}
           >
             All
-          </button>
-          <button 
-            className={`projects__filter ${activeFilter === 'web' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('web')}
+          </span>
+          <span 
+            className={`projects__item ${filter === 'web' ? 'active' : ''}`} 
+            onClick={() => setFilter('web')}
           >
             Web
-          </button>
-          <button 
-            className={`projects__filter ${activeFilter === 'mobile' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('mobile')}
+          </span>
+          <span 
+            className={`projects__item ${filter === 'mobile' ? 'active' : ''}`} 
+            onClick={() => setFilter('mobile')}
           >
             Mobile
-          </button>
-          <button 
-            className={`projects__filter ${activeFilter === 'frontend' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('frontend')}
+          </span>
+          <span 
+            className={`projects__item ${filter === 'frontend' ? 'active' : ''}`} 
+            onClick={() => setFilter('frontend')}
           >
             Frontend
-          </button>
-          <button 
-            className={`projects__filter ${activeFilter === 'fullstack' ? 'active' : ''}`}
-            onClick={() => setActiveFilter('fullstack')}
+          </span>
+          <span 
+            className={`projects__item ${filter === 'fullstack' ? 'active' : ''}`} 
+            onClick={() => setFilter('fullstack')}
           >
             Fullstack
-          </button>
+          </span>
         </div>
         
         <div className="projects__container">
-          {filteredProjects.map((project) => (
-            <div 
-              key={project.id} 
-              className="projects__card" 
-              data-category={project.category.join(' ')}
-              data-aos="fade-up"
-              data-aos-delay={`${(project.id % 3) * 100}`}
-            >
-              <div className="projects__img-container">
-                <svg className="projects__img" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="600" height="400" fill="#1f2937" />
-                  <rect x="50" y="50" width="500" height="300" rx="10" fill="#111827" />
-                  
-                  {/* Project thumbnail SVG - Different for each project */}
-                  {project.id % 3 === 0 && (
-                    <>
-                      <circle cx="300" cy="200" r="100" fill="#6366f1" opacity="0.2" />
-                      <rect x="150" y="150" width="300" height="30" rx="5" fill="#374151" />
-                      <rect x="150" y="200" width="300" height="30" rx="5" fill="#374151" />
-                      <rect x="150" y="250" width="200" height="30" rx="5" fill="#374151" />
-                    </>
-                  )}
-                  
-                  {project.id % 3 === 1 && (
-                    <>
-                      <rect x="150" y="100" width="300" height="40" rx="5" fill="#374151" />
-                      <circle cx="200" cy="200" r="50" fill="#a855f7" opacity="0.3" />
-                      <circle cx="300" cy="200" r="50" fill="#6366f1" opacity="0.3" />
-                      <circle cx="400" cy="200" r="50" fill="#4ade80" opacity="0.3" />
-                      <rect x="200" y="280" width="200" height="30" rx="5" fill="#374151" />
-                    </>
-                  )}
-                  
-                  {project.id % 3 === 2 && (
-                    <>
-                      <rect x="120" y="120" width="360" height="160" rx="5" fill="#374151" />
-                      <rect x="150" y="150" width="100" height="100" rx="5" fill="#6366f1" opacity="0.3" />
-                      <rect x="270" y="150" width="100" height="100" rx="5" fill="#a855f7" opacity="0.3" />
-                      <rect x="150" y="270" width="300" height="20" rx="5" fill="#4ade80" opacity="0.3" />
-                    </>
-                  )}
-                </svg>
-                <div className="projects__img-overlay"></div>
-              </div>
-              
-              <div className="projects__content">
+          <div className="projects__content">
+            {filteredProjects.map((project) => (
+              <div key={project.id} className="projects__card" data-aos="zoom-in">
+                <div className="projects__img">
+                  <img src={project.image} alt={project.title} />
+                </div>
+                
                 <h3 className="projects__title">{project.title}</h3>
                 <p className="projects__description">{project.description}</p>
                 
@@ -185,22 +142,24 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                <div className="projects__links">
+                <div className="projects__buttons">
                   {project.demo && (
-                    <a href={project.demo} className="projects__link" target="_blank" rel="noopener noreferrer">
-                      <i className="fas fa-external-link-alt"></i> Live Demo
+                    <a href={project.demo} className="button projects__button">
+                      <span>Demo</span>
+                      <i className="fas fa-external-link-alt"></i>
                     </a>
                   )}
                   
                   {project.code && (
-                    <a href={project.code} className="projects__link" target="_blank" rel="noopener noreferrer">
-                      <i className="fab fa-github"></i> View Code
+                    <a href={project.code} className="button button--ghost projects__button">
+                      <span>Code</span>
+                      <i className="fab fa-github"></i>
                     </a>
                   )}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -3,185 +3,281 @@ const Skills = () => {
     <section className="skills section" id="skills">
       <div className="container">
         <div className="section__header" data-aos="fade-up">
-          <h2 className="section__title">Technical <span>Skills</span></h2>
+          <h2 className="section__title">My <span>Skills</span></h2>
           <div className="section__subtitle-line"></div>
           <p className="section__description">
-            My technical toolkit encompasses both frontend and backend technologies, enabling me to build complete, end-to-end solutions.
+            As a fullstack developer, I have experience with a wide range of technologies and tools that enable me to build comprehensive solutions from front to back.
           </p>
         </div>
         
         <div className="skills__container">
-          {/* Frontend Skills */}
-          <div className="skills__card" data-aos="fade-up" data-aos-delay="100">
-            <div className="skills__header">
-              <div className="skills__icon-container">
-                <i className="fas fa-laptop-code skills__icon"></i>
-              </div>
-              <h3 className="skills__subtitle">Frontend Development</h3>
-            </div>
+          <div className="skills__content" data-aos="fade-right">
+            <h3 className="skills__title">
+              <i className="fas fa-code"></i> Frontend Development
+            </h3>
             
-            <div className="skills__list">
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">React.js</h4>
-                  <span className="skills__percentage">90%</span>
+            <div className="skills__box">
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">HTML/CSS</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress" style={{ width: '90%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">JavaScript</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">JavaScript (ES6+)</h4>
-                  <span className="skills__percentage">95%</span>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">React</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress" style={{ width: '95%' }}></div>
-                </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">CSS/SASS</h4>
-                  <span className="skills__percentage">85%</span>
-                </div>
-                <div className="skills__bar">
-                  <div className="skills__progress" style={{ width: '85%' }}></div>
-                </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">Tailwind CSS</h4>
-                  <span className="skills__percentage">90%</span>
-                </div>
-                <div className="skills__bar">
-                  <div className="skills__progress" style={{ width: '90%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">TypeScript</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
                 </div>
               </div>
               
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">TypeScript</h4>
-                  <span className="skills__percentage">80%</span>
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Angular</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress" style={{ width: '80%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Vue</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Tailwind</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Redux</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* Backend Skills */}
-          <div className="skills__card" data-aos="fade-up" data-aos-delay="200">
-            <div className="skills__header">
-              <div className="skills__icon-container skills__icon-container--secondary">
-                <i className="fas fa-server skills__icon"></i>
-              </div>
-              <h3 className="skills__subtitle">Backend Development</h3>
-            </div>
+          <div className="skills__content" data-aos="fade-left">
+            <h3 className="skills__title">
+              <i className="fas fa-server"></i> Backend Development
+            </h3>
             
-            <div className="skills__list">
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">Node.js</h4>
-                  <span className="skills__percentage skills__percentage--secondary">85%</span>
+            <div className="skills__box">
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Node.js</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--secondary" style={{ width: '85%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Express</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">Express.js</h4>
-                  <span className="skills__percentage skills__percentage--secondary">90%</span>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Python</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--secondary" style={{ width: '90%' }}></div>
-                </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">MongoDB</h4>
-                  <span className="skills__percentage skills__percentage--secondary">85%</span>
-                </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--secondary" style={{ width: '85%' }}></div>
-                </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">PostgreSQL</h4>
-                  <span className="skills__percentage skills__percentage--secondary">75%</span>
-                </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--secondary" style={{ width: '75%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Django</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
                 </div>
               </div>
               
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">RESTful APIs</h4>
-                  <span className="skills__percentage skills__percentage--secondary">95%</span>
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">MongoDB</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--secondary" style={{ width: '95%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">PostgreSQL</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">REST API</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">GraphQL</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           
-          {/* Mobile Development Skills */}
-          <div className="skills__card" data-aos="fade-up" data-aos-delay="300">
-            <div className="skills__header">
-              <div className="skills__icon-container skills__icon-container--accent">
-                <i className="fas fa-mobile-alt skills__icon"></i>
-              </div>
-              <h3 className="skills__subtitle">Mobile Development</h3>
-            </div>
+          <div className="skills__content" data-aos="fade-right">
+            <h3 className="skills__title">
+              <i className="fas fa-mobile-alt"></i> Mobile Development
+            </h3>
             
-            <div className="skills__list">
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">Flutter</h4>
-                  <span className="skills__percentage skills__percentage--accent">85%</span>
+            <div className="skills__box">
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">React Native</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--accent" style={{ width: '85%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Flutter</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">React Native</h4>
-                  <span className="skills__percentage skills__percentage--accent">80%</span>
-                </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--accent" style={{ width: '80%' }}></div>
-                </div>
-              </div>
-              
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">iOS Development</h4>
-                  <span className="skills__percentage skills__percentage--accent">65%</span>
-                </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--accent" style={{ width: '65%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Swift</h3>
+                    <span className="skills__level">Basic</span>
+                  </div>
                 </div>
               </div>
               
-              <div className="skills__item">
-                <div className="skills__titles">
-                  <h4 className="skills__name">Android Development</h4>
-                  <span className="skills__percentage skills__percentage--accent">70%</span>
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Kotlin</h3>
+                    <span className="skills__level">Basic</span>
+                  </div>
                 </div>
-                <div className="skills__bar">
-                  <div className="skills__progress skills__progress--accent" style={{ width: '70%' }}></div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Expo</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Firebase</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="skills__content" data-aos="fade-left">
+            <h3 className="skills__title">
+              <i className="fas fa-tools"></i> Other Skills
+            </h3>
+            
+            <div className="skills__box">
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Git</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Docker</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">AWS</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">CI/CD</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">UI/UX Design</h3>
+                    <span className="skills__level">Intermediate</span>
+                  </div>
+                </div>
+                
+                <div className="skills__data">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <h3 className="skills__name">Agile/Scrum</h3>
+                    <span className="skills__level">Advanced</span>
+                  </div>
                 </div>
               </div>
             </div>

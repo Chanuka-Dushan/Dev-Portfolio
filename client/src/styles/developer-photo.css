@@ -1,0 +1,201 @@
+/* Developer Photo Styles */
+.developer-photo-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.photo-animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.developer-photo {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.developer-photo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animated circle elements */
+.circle-1 {
+  animation: rotate 15s linear infinite;
+  transform-origin: 250px 250px;
+}
+
+.circle-2 {
+  animation: rotate 20s linear infinite reverse;
+  transform-origin: 250px 250px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tech icons floating animations */
+.tech-icon {
+  position: absolute;
+  opacity: 0;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.icon-1 {
+  top: 10%;
+  left: 5%;
+  animation-name: float-1;
+  animation-delay: 0.5s;
+}
+
+.icon-2 {
+  top: 15%;
+  right: 5%;
+  animation-name: float-2;
+  animation-delay: 1s;
+}
+
+.icon-3 {
+  bottom: 20%;
+  left: 10%;
+  animation-name: float-3;
+  animation-delay: 1.5s;
+}
+
+.icon-4 {
+  bottom: 30%;
+  right: 10%;
+  animation-name: float-4;
+  animation-delay: 2s;
+}
+
+.icon-5 {
+  bottom: 10%;
+  right: 20%;
+  animation-name: float-5;
+  animation-delay: 2.5s;
+}
+
+@keyframes float-1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(10px, -15px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes float-2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-15px, -10px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes float-3 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(15px, 10px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes float-4 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-10px, 15px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes float-5 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-5px, -15px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+/* Media queries for responsive photo */
+@media screen and (min-width: 768px) {
+  .developer-photo-container {
+    margin: 0;
+  }
+}

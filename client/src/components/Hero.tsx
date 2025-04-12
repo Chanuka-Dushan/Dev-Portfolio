@@ -77,7 +77,7 @@ const Hero = () => {
               <pre>
                 <code className="language-javascript">
 {`const developer = {
-  name: "John Developer",
+  name: "Dushan Developer",
   skills: ["JavaScript", "React", 
     "Node.js", "Flutter"],
   passion: "Building elegant solutions",

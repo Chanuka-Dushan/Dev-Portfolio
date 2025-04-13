@@ -20,7 +20,7 @@ export default function Footer() {
                     className="w-full h-full object-cover"
                 />
               </div>
-              <span className="font-sans font-bold text-lg">Dushan Chanuka</span>
+              <span className="font-sans font-bold text-lg">dc</span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">Software Engineer & Mobile Developer</p>
           </div>

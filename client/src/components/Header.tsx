@@ -28,9 +28,12 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav container">
         <a href="#" className="nav__logo">
-          <span className="nav__logo-text">John</span>
-          <span className="nav__logo-text-highlight">Developer</span>
-        </a>
+        <span className="nav__logo-text text-gray-300 text-xl sm:text-2xl font-bold">
+    &lt;Dev
+  </span>
+  <span className="nav__logo-text-highlight text-primary hover:text-secondary transition-colors text-xl sm:text-2xl font-bold">
+    Portfolio/&gt;
+  </span> </a>
         
         <div className={`nav__menu ${isMenuOpen ? 'show-menu' : ''}`}>
           <ul className="nav__list">

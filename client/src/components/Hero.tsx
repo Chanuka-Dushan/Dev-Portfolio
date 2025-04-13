@@ -33,8 +33,8 @@ const Hero = () => {
           <div className="hero__content" data-aos="fade-right">
             <span className="hero__subtitle">Hello World! I'm</span>
             <h1 className="hero__title">
-              <span className="hero__title-name">John</span>{' '}
-              <span className="hero__title-role">Developer</span>
+              <span className="hero__title-name">Dushan</span>{' '}
+              <span className="hero__title-role">Chanuka</span>
             </h1>
             <div className="hero__title-line"></div>
             <h3 className="hero__profession" ref={typingTextRef}>
@@ -77,12 +77,11 @@ const Hero = () => {
               <pre>
                 <code className="language-javascript">
 {`const developer = {
-  name: "John Developer",
+  name: "Dushan Chanuka",
+  title: "Fullstack & Mobile Developer",
   skills: ["JavaScript", "React", 
     "Node.js", "Flutter"],
   passion: "Building elegant solutions",
-  coffee: status => status === "coding" 
-    ? "needed" : "still needed"
 };`}
                 </code>
               </pre>
